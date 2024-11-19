@@ -15,10 +15,10 @@ class _MoodEntryPageState extends State<MoodEntryPage> {
   Future<List<MoodEntry>> fetchMood(CookieRequest request) async {
     // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
     final response = await request.get('http://127.0.0.1:8000/json/');
-    
+
     // Melakukan decode response menjadi bentuk json
     var data = response;
-    
+
     // Melakukan konversi data json menjadi object MoodEntry
     List<MoodEntry> listMood = [];
     for (var d in data) {
@@ -88,4 +88,3 @@ class _MoodEntryPageState extends State<MoodEntryPage> {
     );
   }
 }
-
